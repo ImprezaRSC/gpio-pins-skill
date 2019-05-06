@@ -10,7 +10,7 @@ class RosGpioPins(MycroftSkill):
     @intent_file_handler('pins.gpio.ros.intent')
     def handle_pins_gpio_ros(self, message):
         self.speak_dialog('pins.gpio.ros')
-        #GPIO.setmode(GPIO.BOARD)
+        GPIO.setmode(GPIO.BOARD)
         green=11
         GPIO.setup(green,GPIO.OUT)
         GPIO.output(green,True)
